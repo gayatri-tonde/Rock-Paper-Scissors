@@ -1,20 +1,43 @@
-function compChoice(){
-    let a = Math.floor(Math.random()*3)
-    return check(a)
+function getCompChoice() {
+    let compChoice = Math.floor(Math.random() * 3);
+    if (compChoice == 1) {
+        return "rock";
+    }
+    else if (compChoice == 2) {
+        return "paper";
+    }
+    else {
+        return "scissor";
+    }
 }
-function check(a)
-{
-    if (a==1)
-    {
-        return"rock"
+
+function getUserChoice() {
+    let userChoice = prompt("Enter rock, paper or scissor");
+    return userChoice;
+}
+
+const compChoice = getCompChoice();
+const userChoice = getUserChoice();
+
+function playRound(compChoice, userChoice) {
+    if (compChoice == userChoice) {
+        return "tie";
     }
-    else if (a==2)
-    {
-        return "paper"
+
+    else if (compChoice = "rock" && userChoice = "paper") {
+
     }
-    else
-    {
-        return "scissor"
+
+    else if (compChoice = "paper") {
+
     }
-    return compChoice()
-}console.log(compChoice())
+
+    else if (compChoice = "scissor") { 
+
+    }
+
+    else {
+        return "YOU LOST...!";
+    }
+}
+

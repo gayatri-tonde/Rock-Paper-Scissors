@@ -22,6 +22,8 @@ Rock-Paper-Scissors<br>
 ├── style.css       # Styles for layout and UI<br>
 └── script.js       # Game logic<br>
 
-##screenshot
+## Screenshot
 ![Screenshot 2025-07-06 001432](https://github.com/user-attachments/assets/c7ed946a-4706-479f-b06a-aa5ce85cd846)
 
+## Link
+https://gayatri-tonde.github.io/Rock-Paper-Scissors/

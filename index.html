@@ -6,8 +6,40 @@
     <title>Document</title>
  </head>
  <body>
-    <h1>Rock Paper Scissors</h1>
-    <script src="script.js"></script>
-    
+   <h1>Rock Paper Scissors</h1>
+   <div>
+      <h2>RULES</h2>
+      <ol>
+         <li>Each game will have 5 rounds.</li>
+         <li>In each round player must select any one button as choice.</li>
+         <li>If it is a tie, then the round will be played again.</li>
+         <li> After each round the score will be displayed.</li>
+      </ol>
+   </div>
+   <div class="container">
+     <div class="right">
+        <h2>PLAYER</h2>
+        <br>
+        <button class="btn" value="rock">ROCK</button>
+        <button class="btn" value="paper">PAPER</button>
+        <button class="btn" value="scissor">SCISSORS</button>
+        <br> <br>
+        SCORE
+        <div id="userScore">0</div>
+     </div>
+     <div class="left">
+        <h2>Computer</h2>
+        <br>
+        <div id="compChoice">Choice: </div>
+        <br>
+        SCORE
+        <div id="compScore">0</div>
+     </div>
+   </div>
+   <div id="result">
+      <div></div>
+      <div></div>
+   </div>
+   <script src="script.js"></script>
  </body>
- </html>
+</html>

@@ -46,6 +46,10 @@ body {
     margin: 5px;
 }
 
+.btn:active {
+    background-color: #f00707;
+}
+
 .score {
     margin: 20px;
     background-color: #f0f0f0;

@@ -15,9 +15,10 @@ alert("RULES:\n" +
     "4. After each round the score will be displayed.");
     
 function playround(userChoice) {
-
+    // show the current round (1-based)
+    document.querySelector("#round").innerHTML = round + 1;
     const compChoice = getComputerChoice();
-    document.querySelector("#compChoice").innerHTML = "Choice: " + compChoice;
+    document.querySelector("#compChoice").innerHTML = "Chose: " + compChoice;
 
     if (userChoice == compChoice) {
         alert("It's a tie! Play again.");   
@@ -38,24 +39,35 @@ function playround(userChoice) {
         round++;
     }
     
-    document.querySelector("#userScore").innerHTML = "Round "+ round+ ": " + userScore;
-    document.querySelector("#compScore").innerHTML = "Round "+ round+ ": " + compScore;
+    document.querySelector("#userScore").innerHTML =  userScore;
+    document.querySelector("#compScore").innerHTML =  compScore;
 
     if (round == 5) {
         document.querySelectorAll(".btn").forEach(btn => btn.disabled = true);
         setTimeout(() => {
-            result(userScore, compScore);
+            result();
         }, 100); // 100ms delay lets the browser update the UI
     }
 }
 
-function result(userScore, compScore) {
+function result() {
+    // use the global scores
     if (userScore > compScore) {
-        alert("YOU WON!!!")
+        alert("YOU WON!!!");
     }
     else {
-       alert("COMPUTER WON!!!")
+       alert("COMPUTER WON!!!");
     }
+    //reset
+    userScore = 0;
+    compScore = 0;
+    round = 0;
+
+    // update UI and re-enable buttons
+    document.querySelector("#userScore").innerHTML = userScore;
+    document.querySelector("#compScore").innerHTML = compScore;
+    document.querySelector("#round").innerHTML = round;
+    document.querySelectorAll(".btn").forEach(btn => btn.disabled = false);
 }
 
 const btns = document.querySelectorAll(".btn")

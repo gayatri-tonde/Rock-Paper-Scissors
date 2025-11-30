@@ -2,21 +2,43 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="javascript.js"></script>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Document</title>
+   <link type="text/css" href="style.css" rel="stylesheet" />
 </head>
 
 <body>
-    <h1>ROCK PAPER SCISSORS GAME</h1>
-    <div>
-        <input type="button" value="choice" onclick="getUserChoice()">
-        <INPUT TYPE="button" value="computer choice" onclick="getCompChoice()">
-    </div>
-    <div>
-        <input type="button" value="play" onclick="playGame()">
-    </div>
+   <h1><b>ROCK PAPER SCISSORS</b></h1>
+
+   <div class="container">
+      <div class="right">
+         <div>
+            <h2>PLAYER</h2>
+         </div>
+         <div>
+            <button class="btn" value="rock">ROCK</button>
+            <button class="btn" value="paper">PAPER</button>
+            <button class="btn" value="scissor">SCISSORS</button>
+         </div>
+         <div class="score">
+            <h4>SCORE</h4>
+            <div id="userScore">0</div>
+         </div>
+      </div>
+
+      <div class="left">
+         <div>
+            <h2>COMPUTER</h2>
+         </div>
+         <div id="compChoice"></div>
+         <div class="score">
+            <h4>SCORE</h4>
+            <div id="compScore">0</div>
+         </div>
+      </div>
+   </div>
+   <script src="script.js"></script>
 </body>
 
 </html>

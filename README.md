@@ -79,6 +79,3 @@ Rock-Paper-Scissors/
 
 Play the game online: https://gayatri-tonde.github.io/Rock-Paper-Scissors/
 
-## 📝 License
-
-This project is open source and available under the MIT License.
